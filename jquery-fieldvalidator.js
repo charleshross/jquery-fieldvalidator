@@ -5,11 +5,11 @@
  * Copyright (c) 2013, Charles Ross (https://github.com/charleshross). All rights reserved.
  * License: Private Software
  * Website: https://github.com/charleshross/
- * Prerequisites : jQuery, Date.js
+ * Prerequisites : jQuery, jQuery Country, jQuery Timezone 
  */
 
 (function( $ ) {
-	$.fn.newaccount = function( options ) {
+	$.fn.fieldvalidator = function( options ) {
 		
 		// Proper Email Validation (http://www.regular-expressions.info/email.html)
 		function proper_email(email) {
@@ -177,12 +177,14 @@
 						
 						// Show Error Message
 						this.parent().find(settings.message_container+':first').removeClass('success').addClass('error').show();
+						this.css('box-shadow','inset 0px 0px 50px rgb(255, 228, 228)');
 					
 					// Hide
 					} else if (settings.reset == true) {
 						
 						// Show Error Message
 						this.parent().find(settings.message_container+':first').hide();
+						this.css('box-shadow','none');
 						
 					}
 					
@@ -215,6 +217,7 @@
 					
 					// Show Error Message
 					this.parent().find(settings.message_container).removeClass('success').addClass('error').show();
+					this.css('box-shadow','inset 0px 0px 50px rgb(255, 228, 228)');
 					
 				}
 				
@@ -244,6 +247,7 @@
 					
 					// Show Error Message
 					this.parent().find(settings.message_container).removeClass('success').addClass('error').show();
+					this.css('box-shadow','inset 0px 0px 50px rgb(255, 228, 228)');
 					
 				}
 				
@@ -276,6 +280,7 @@
 					
 					// Show Error Message
 					this.parent().find(settings.message_container).removeClass('success').addClass('error').show();
+					this.css('box-shadow','inset 0px 0px 50px rgb(255, 228, 228)');
 					
 				}
 				
@@ -312,6 +317,7 @@
 					
 					// Show Error Message
 					this.parent().find(settings.message_container).removeClass('success').addClass('error').show();
+					this.css('box-shadow','inset 0px 0px 50px rgb(255, 228, 228)');
 					
 				}
 				
@@ -353,6 +359,7 @@
 					
 					// Show Error Message
 					this.parent().find(settings.message_container).removeClass('success').addClass('error').show();
+					this.css('box-shadow','inset 0px 0px 50px rgb(255, 228, 228)');
 					
 				}
 				
@@ -387,6 +394,7 @@
 					
 					// Show Error Message
 					this.parent().find(settings.message_container).removeClass('success').addClass('error').show();
+					this.css('box-shadow','inset 0px 0px 50px rgb(255, 228, 228)');
 					
 				}
 				
@@ -421,6 +429,7 @@
 					
 					// Show Error Message
 					this.parent().find(settings.message_container).removeClass('success').addClass('error').show();
+					this.css('box-shadow','inset 0px 0px 50px rgb(255, 228, 228)');
 					
 				}
 				
@@ -453,6 +462,7 @@
 					
 					// Show Error Message
 					this.parent().find(settings.message_container).removeClass('success').addClass('error').show();
+					this.css('box-shadow','inset 0px 0px 50px rgb(255, 228, 228)');
 					
 				}
 				
@@ -479,6 +489,7 @@
 					
 					// Show Error Message
 					this.parent().find(settings.message_container+':first').removeClass('success').addClass('error').show();
+					this.parent().css('box-shadow','inset 0px 0px 50px rgb(255, 228, 228)');
 				
 				// Hide
 				} else if (settings.reset == true) {
@@ -489,6 +500,15 @@
 				}
 				
 				return false;
+				
+			}
+			
+			// Hide Errors
+			if (settings.reset == true) {
+				
+				// Show Error Message
+				this.parent().find(settings.message_container+':first').hide();
+				this.parent().css('box-shadow','none');
 				
 			}
 			
@@ -507,6 +527,7 @@
 			
 			// Show Error Message
 			this.parent().find(settings.message_container).removeClass('error').addClass('success').show();
+			this.css('box-shadow','none');
 		
 		// Quiet Success
 		} else if (settings.quiet_success) {

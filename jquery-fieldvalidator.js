@@ -516,6 +516,7 @@
 		
 		// Duplication Check
 		
+		// zzz - remote validator duplicate check needs to be inserted
 		
 		//////////////////////// Sucess ////////////////////////
 		
